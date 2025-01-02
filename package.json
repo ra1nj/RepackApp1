@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "start": "react-native webpack-start --port 9000",
     "start:standalone": "STANDALONE=1 react-native webpack-start --port 8081",
-    "test": "jest"
+    "test": "jest",
+    "bundle:ios": "react-native webpack-bundle --platform ios --entry-file App.tsx --dev false"
   },
   "dependencies": {
     "react": "18.2.0",
