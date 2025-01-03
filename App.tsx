@@ -27,6 +27,7 @@ function App(): React.JSX.Element {
         contentContainerStyle={{height: '100%'}}>
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
           <Text>{'This is App 1'}</Text>
+          <Text>{'Testing HMR'}</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
