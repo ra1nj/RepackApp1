@@ -15,22 +15,28 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import {HomeScreen} from './src/HomeScreen';
+import {Provider} from 'react-redux';
+import {store} from './src/redux/store';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <SafeAreaView>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        contentContainerStyle={{height: '100%'}}>
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-          <Text>{'This is App 1'}</Text>
-          <Text>{'Testing HMR'}</Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <Provider store={store}>
+      <SafeAreaView>
+        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          contentContainerStyle={{height: '100%'}}>
+          <View
+            style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+            <Text>{'This is App 1'}</Text>
+            <HomeScreen />
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </Provider>
   );
 }
 
