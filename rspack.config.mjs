@@ -98,7 +98,7 @@ export default (env) => {
                     test: /\.[jt]sx?$/,
                     exclude: [/node_modules/],
                     type: 'javascript/auto',
-                    use: {
+                    use: [{
                         loader: 'builtin:swc-loader',
                         /** @type {import('@rspack/core').SwcLoaderOptions} */
                         options: {
@@ -120,6 +120,17 @@ export default (env) => {
                             },
                         },
                     },
+                        {
+                            loader: 'babel-loader',
+                            options: {
+                                /** Add React Refresh transform only when HMR is enabled. */
+                                plugins:
+                                  devServer && devServer.hmr
+                                    ? ['module:react-refresh/babel']
+                                    : undefined,
+                            },
+                        },
+                    ],
                 },
                 /** Run React Native codegen, required for utilizing new architecture */
                 Repack.REACT_NATIVE_CODEGEN_RULES,
