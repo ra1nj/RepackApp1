@@ -1,9 +1,13 @@
-import {View, Text} from 'react-native';
+import {View, Text, Button} from 'react-native';
+import {InAppBrowser} from 'react-native-inappbrowser-reborn';
 
 export const HomeScreen = () => {
+  const openBrowser = async () => {
+    await InAppBrowser.open('https://bing.com');
+  };
   return (
     <View>
-      <Text>Welcome !</Text>
+      <Button title={'Open in-app browser'} onPress={openBrowser} />
     </View>
   );
 };

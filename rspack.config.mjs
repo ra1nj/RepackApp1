@@ -123,11 +123,12 @@ export default (env) => {
                         {
                             loader: 'babel-loader',
                             options: {
-                                /** Add React Refresh transform only when HMR is enabled. */
-                                plugins:
-                                  devServer && devServer.hmr
-                                    ? ['module:react-refresh/babel']
-                                    : undefined,
+                                presets: [
+                                    [
+                                        'module:@react-native/babel-preset',
+                                        {disableImportExportTransform: true},
+                                    ],
+                                ],
                             },
                         },
                     ],
@@ -196,12 +197,12 @@ export default (env) => {
                 shared: {
                     react: {
                         singleton: true,
-                        eager: true,
+                        eager: false,
                         requiredVersion: "18.2.0",
                     },
                     'react-native': {
                         singleton: true,
-                        eager: true,
+                        eager: false,
                         requiredVersion: '0.74.5',
                     },
                 },
