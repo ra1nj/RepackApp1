@@ -93,6 +93,26 @@ export default (env) => {
                 Repack.REACT_NATIVE_LOADING_RULES,
                 Repack.NODE_MODULES_LOADING_RULES,
                 Repack.FLOW_TYPED_MODULES_LOADING_RULES,
+                {
+                    test: /\.[jt]sx?$/,
+                    include: [
+                        /node_modules(.*[/\\])+react-native-inappbrowser-reborn/,
+                    ],
+                    type: 'javascript/auto',
+                    use: {
+                        loader: '@callstack/repack/flow-loader',
+                        options: {all: true},
+                    },
+                },
+                {
+                    test: /\.[jt]sx?$/,
+                    include: [
+                        /node_modules(.*[/\\])+react-native-reanimated/,
+                        /node_modules(.*[/\\])+react-native-draggable-flatlist/,
+                    ],
+                    type: 'javascript/auto',
+                    use: 'babel-loader',
+                },
                 /** Here you can adjust loader that will process your files. */
                 {
                     test: /\.[jt]sx?$/,
@@ -205,6 +225,10 @@ export default (env) => {
                         eager: false,
                         requiredVersion: '0.74.5',
                     },
+                    "react-native-gesture-handler": {singleton: true, eager: false, requiredVersion: "^2.21.2",},
+                    "react-native-draggable-flatlist": {singleton: true, eager: false, requiredVersion: "^4.0.1",},
+                    "react-native-reanimated": {singleton: true, eager: false, requiredVersion: "^3.16.6",},
+                    "@react-native-picker/picker": {singleton: true, eager: false, requiredVersion: "^2.5.1", import:false}
                 },
             }),
         ],

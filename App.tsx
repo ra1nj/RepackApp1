@@ -18,6 +18,7 @@ import {
 import {HomeScreen} from './src/HomeScreen';
 import {Provider} from 'react-redux';
 import {store} from './src/redux/store';
+import {PickerTest} from './src/PickerTest';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -33,6 +34,7 @@ function App(): React.JSX.Element {
             style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
             <Text>{'This is App 1'}</Text>
             <HomeScreen />
+            <PickerTest />
           </View>
         </ScrollView>
       </SafeAreaView>
