@@ -1446,10 +1446,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@callstack/repack-dev-server@5.0.0-rc.2":
-  version "5.0.0-rc.2"
-  resolved "https://registry.yarnpkg.com/@callstack/repack-dev-server/-/repack-dev-server-5.0.0-rc.2.tgz#9d681b51f52acf2b1d1646b233f689ca094976d2"
-  integrity sha512-f4YxAsdL47LbBUwI2i+OaUkMhdfaHaI9Bkiv6Cr3+/8ugR4LV3u8kT8FcYdifZWfc1sWzPbhaJ9MLFQMKKLOgw==
+"@callstack/repack-dev-server@5.0.0-rc.5":
+  version "5.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/@callstack/repack-dev-server/-/repack-dev-server-5.0.0-rc.5.tgz#c8969fcd3cc0f4601d9846dd652be2831df78456"
+  integrity sha512-iDyMgIlnchWbzTuY3DFqako/0EOo2GsVV6WrYtihH6yz0Ps5myuDGs4o/7p2mLFRYJe+BrUTHQoLbCUGTZ6r7Q==
   dependencies:
     "@babel/code-frame" "^7.16.7"
     "@fastify/middie" "^8.3.0"
@@ -1462,13 +1462,14 @@
     source-map "^0.7.4"
     ws "^8.7.0"
 
-"@callstack/repack@5.0.0-rc.2":
-  version "5.0.0-rc.2"
-  resolved "https://registry.yarnpkg.com/@callstack/repack/-/repack-5.0.0-rc.2.tgz#0aefd343c4a1897c5412adc6969624c6ea79a2c6"
-  integrity sha512-fhe1TjYS0E9mIAdRbZVngxhZxnpHb4h6RErJ3hPO/nIdhARvh2jn/+xY3GCgusd7Q7J8qcHWaGfXTbXeawCuYg==
+"@callstack/repack@5.0.0-rc.5":
+  version "5.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/@callstack/repack/-/repack-5.0.0-rc.5.tgz#948d193b71fc4d669d04bf4c96426c31ad9e0cee"
+  integrity sha512-7WNtVwjh49xoW9F2nTr4Hl6yjM7i1OOigXEQS4vzhBHgnDoh0ksND2WRMhp9z2XvaWwOVccTtYvlqIwFJV1brA==
   dependencies:
-    "@callstack/repack-dev-server" "5.0.0-rc.2"
+    "@callstack/repack-dev-server" "5.0.0-rc.5"
     "@discoveryjs/json-ext" "^0.5.7"
+    "@rspack/plugin-react-refresh" "1.0.0"
     colorette "^2.0.20"
     dedent "^0.7.0"
     events "^3.3.0"
@@ -2580,6 +2581,14 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@rspack/lite-tapable/-/lite-tapable-1.0.1.tgz#d4540a5d28bd6177164bc0ba0bee4bdec0458591"
   integrity sha512-VynGOEsVw2s8TAlLf/uESfrgfrq2+rcXB1muPJYBWbsm1Oa6r5qVQhjA5ggM6z/coYPrsVMgovl3Ff7Q7OCp1w==
+
+"@rspack/plugin-react-refresh@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@rspack/plugin-react-refresh/-/plugin-react-refresh-1.0.0.tgz#7e0cc22b157d25131be4283667cdbb86960a3650"
+  integrity sha512-WvXkLewW5G0Mlo5H1b251yDh5FFiH4NDAbYlFpvFjcuXX2AchZRf9zdw57BDE/ADyWsJgA8kixN/zZWBTN3iYA==
+  dependencies:
+    error-stack-parser "^2.0.6"
+    html-entities "^2.1.0"
 
 "@rspack/plugin-react-refresh@^1.0.1":
   version "1.0.1"
@@ -5257,7 +5266,7 @@ homedir-polyfill@^1.0.1:
   dependencies:
     parse-passwd "^1.0.0"
 
-html-entities@^2.5.2:
+html-entities@^2.1.0, html-entities@^2.5.2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-2.5.2.tgz#201a3cf95d3a15be7099521620d19dfb4f65359f"
   integrity sha512-K//PSRMQk4FZ78Kyau+mZurHn3FH0Vwr+H36eE0rPbeYkRRi9YxceYPhuN60UwWorxyKHhqoAJl2OFKa4BVtaA==

@@ -28,7 +28,7 @@
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
-    "@callstack/repack": "5.0.0-rc.2",
+    "@callstack/repack": "5.0.0-rc.5",
     "@react-native/babel-preset": "0.74.87",
     "@react-native/eslint-config": "0.74.87",
     "@react-native/metro-config": "0.74.87",
