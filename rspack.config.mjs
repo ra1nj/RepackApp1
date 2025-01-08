@@ -61,9 +61,9 @@ export default (env) => {
              * dependency. You might need it when using workspaces/monorepos or unconventional project
              * structure. For simple/typical project you won't need it.
              */
-            // alias: {
-            //   'react-native': reactNativePath,
-            // },
+            alias: {
+              '~/redux':path.resolve(dirname,'src/redux/')
+            },
         },
         /**
          * Configures output.
@@ -120,16 +120,16 @@ export default (env) => {
                             },
                         },
                     },
-                        {
-                            loader: 'babel-loader',
-                            options: {
-                                /** Add React Refresh transform only when HMR is enabled. */
-                                plugins:
-                                  devServer && devServer.hmr
-                                    ? ['module:react-refresh/babel']
-                                    : undefined,
-                            },
-                        },
+                        // {
+                        //     loader: 'babel-loader',
+                        //     options: {
+                        //         /** Add React Refresh transform only when HMR is enabled. */
+                        //         plugins:
+                        //           devServer && devServer.hmr
+                        //             ? ['module:react-refresh/babel']
+                        //             : undefined,
+                        //     },
+                        // },
                     ],
                 },
                 /** Run React Native codegen, required for utilizing new architecture */
