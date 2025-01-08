@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -18,9 +18,19 @@ import {
 import {HomeScreen} from './src/HomeScreen';
 import {Provider} from 'react-redux';
 import {store} from '~/redux/store';
+import {AppDataSource} from '~/storage/db/datasource';
+import 'reflect-metadata';
+
+const bootstrap = async () => {
+  await AppDataSource.initialize();
+};
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+
+  useEffect(() => {
+    bootstrap();
+  }, []);
 
   return (
     <Provider store={store}>

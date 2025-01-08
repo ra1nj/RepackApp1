@@ -62,7 +62,7 @@ export default (env) => {
              * structure. For simple/typical project you won't need it.
              */
             alias: {
-              '~/redux':path.resolve(dirname,'src/redux/')
+              '~':path.resolve(dirname,'src/')
             },
         },
         /**
@@ -120,16 +120,9 @@ export default (env) => {
                             },
                         },
                     },
-                        // {
-                        //     loader: 'babel-loader',
-                        //     options: {
-                        //         /** Add React Refresh transform only when HMR is enabled. */
-                        //         plugins:
-                        //           devServer && devServer.hmr
-                        //             ? ['module:react-refresh/babel']
-                        //             : undefined,
-                        //     },
-                        // },
+                        {
+                            loader: 'babel-loader',
+                        },
                     ],
                 },
                 /** Run React Native codegen, required for utilizing new architecture */
@@ -196,13 +189,23 @@ export default (env) => {
                 shared: {
                     react: {
                         singleton: true,
-                        eager: true,
+                        eager: false,
                         requiredVersion: "18.2.0",
                     },
                     'react-native': {
                         singleton: true,
-                        eager: true,
+                        eager: false,
                         requiredVersion: '0.74.5',
+                    },
+                    'react-native-quick-sqlite': {
+                        singleton: true,
+                        eager: false,
+                        requiredVersion: '^8.2.7',
+                    },
+                    'typeorm': {
+                        singleton: true,
+                        eager: false,
+                        requiredVersion: '^0.3.20',
                     },
                 },
             }),
