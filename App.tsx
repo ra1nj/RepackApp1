@@ -17,7 +17,7 @@ import {
 } from 'react-native';
 import {HomeScreen} from './src/HomeScreen';
 import {Provider} from 'react-redux';
-import {store} from './src/redux/store';
+import {store} from '~/redux/store';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
