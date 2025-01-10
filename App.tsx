@@ -19,6 +19,8 @@ import {HomeScreen} from './src/HomeScreen';
 import {Provider} from 'react-redux';
 import {store} from './src/redux/store';
 import {PickerTest} from './src/PickerTest';
+import {SortableListTest} from './src/SortableList';
+import {NestableScrollContainer} from 'react-native-draggable-flatlist';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -30,12 +32,16 @@ function App(): React.JSX.Element {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           contentContainerStyle={{height: '100%'}}>
-          <View
-            style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+          <NestableScrollContainer
+            contentContainerStyle={{
+              flex: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
             <Text>{'This is App 1'}</Text>
             <HomeScreen />
-            <PickerTest />
-          </View>
+            <SortableListTest />
+          </NestableScrollContainer>
         </ScrollView>
       </SafeAreaView>
     </Provider>

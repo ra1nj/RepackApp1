@@ -218,16 +218,16 @@ export default (env) => {
                     react: {
                         singleton: true,
                         eager: false,
-                        requiredVersion: "18.2.0",
+                        requiredVersion: "18.3.1",
                     },
                     'react-native': {
                         singleton: true,
                         eager: false,
-                        requiredVersion: '0.74.5',
+                        requiredVersion: '0.76.2',
                     },
-                    "react-native-gesture-handler": {singleton: true, eager: false, requiredVersion: "^2.21.2",},
-                    "react-native-draggable-flatlist": {singleton: true, eager: false, requiredVersion: "^4.0.1",},
-                    "react-native-reanimated": {singleton: true, eager: false, requiredVersion: "^3.16.6",},
+                    "react-native-gesture-handler": {singleton: true, eager: false, requiredVersion: "^2.21.2",import:false},
+                    "react-native-draggable-flatlist": {singleton: true, eager: false, requiredVersion: "^4.0.1",import:false},
+                    "react-native-reanimated": {singleton: true, eager: false, requiredVersion: "^3.16.6",import:false},
                     "@react-native-picker/picker": {singleton: true, eager: false, requiredVersion: "^2.5.1", import:false}
                 },
             }),
